@@ -1,0 +1,6 @@
+Scenario                                Intermediate Operations         Terminal Operations
+Required part of a useful pipeline?     No                              Yes
+Can exist multiple time in a pipeline?  Yes                             No
+Return type is a stream type?           Yes                             No
+Executed upon method call?              No                              Yes
+Stream valid after call?                Yes                             No
