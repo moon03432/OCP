@@ -49,7 +49,7 @@ public class DeadLock {
             CyclicBarrier c1 = new CyclicBarrier(4, () -> System.out.println("*** Animals removed! ***"));
             CyclicBarrier c2 = new CyclicBarrier(4, () -> System.out.println("*** Pen Cleaned! ***"));
 
-            for(int i=0; i<4; i++)
+            for(int i=0; i<8; i++)
                 service.submit(() -> manager.performTask(c1,c2));
         } finally {
             if(service != null) service.shutdown();

@@ -25,7 +25,7 @@ public class Reduce {
 
         // Example 3: Integer multiplication
         Stream<Integer> s3 = Stream.of(3,5,6);
-        System.out.println(s3.reduce(1, (a,b) -> a*b));
+        System.out.println(s3.reduce(1, (a,b) -> a*b)); // 90
 
         // Example 4
         BinaryOperator<Integer> multiply = (a,b) -> a*b;

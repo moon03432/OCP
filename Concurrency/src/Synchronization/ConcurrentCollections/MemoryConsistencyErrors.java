@@ -1,5 +1,6 @@
 package Synchronization.ConcurrentCollections;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -16,7 +17,9 @@ public class MemoryConsistencyErrors {
         foodData.put("flamingo", 2);
 
         // With HashMap, JVM is throwing ConcurrentModificationException at runtime
-        for(String key: foodData.keySet())
+        for(String key: foodData.keySet()) {
             System.out.println(foodData.remove(key)); // remove action is ordered after reading keySet
+        }
+
     }
 }

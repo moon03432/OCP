@@ -41,7 +41,7 @@ public class WeighAnimalAction extends RecursiveAction {
     }
 
     public static void main(String[] args) {
-        Double[] weights = new Double[10];
+        Double[] weights = new Double[100];
 
         ForkJoinTask<?> task = new WeighAnimalAction(weights, 0, weights.length);
         ForkJoinPool pool = new ForkJoinPool();
@@ -50,7 +50,7 @@ public class WeighAnimalAction extends RecursiveAction {
         // Print results
         System.out.println();
         System.out.print("Weights: ");
-        Arrays.asList(weights).stream().forEach(d -> System.out.print(d.intValue()+" "));
+        Arrays.asList(weights).parallelStream().forEach(d -> System.out.print(d.intValue()+" "));
         System.out.println();
     }
 }

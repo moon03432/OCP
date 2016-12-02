@@ -16,22 +16,29 @@ public class Deadlock {
     private static class Water {}
 
     private static class Fox {
+
+        String name;
+
+        Fox(String name) {
+            this.name = name;
+        }
+
         public void eatAndDrink(Food food, Water water) {
             synchronized (food) {
-                System.out.println("Got Food!");
+                System.out.println(name + ": Got Food!");
                 move();
                 synchronized (water) {
-                    System.out.println("Got Water!");
+                    System.out.println(name + ": Got Water!");
                 }
             }
         }
 
         public void drinkAndEat(Food food, Water water) {
             synchronized (water) {
-                System.out.println("Got Water!");
+                System.out.println(name + ": Got Water!");
                 move();
                 synchronized (food) {
-                    System.out.println("Got Food!");
+                    System.out.println(name + ": Got Food!");
                 }
             }
         }
@@ -46,8 +53,8 @@ public class Deadlock {
     }
 
     public static void main(String[] args) {
-        Fox foxy = new Fox();
-        Fox tails = new Fox();
+        Fox foxy = new Fox("foxy");
+        Fox tails = new Fox("tails");
         Food food = new Food();
         Water water = new Water();
 

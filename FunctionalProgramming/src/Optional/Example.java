@@ -7,7 +7,7 @@ import java.util.Optional;
  *
  * Optional is like null, but it implies possibility of nullity and provide an uniform way to treat it
  */
-public class FirstExample {
+public class Example {
 
     private static Optional<Double> average(int... scores) {
 

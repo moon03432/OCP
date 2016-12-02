@@ -23,7 +23,8 @@ public class AtomicSheepManager {
         System.out.print(sheepCount.incrementAndGet()+" ");
     }
 
-    public static void main(String[] args) { ExecutorService service = null;
+    public static void main(String[] args) {
+        ExecutorService service = null;
         try {
             service = Executors.newFixedThreadPool(20);
             AtomicSheepManager manager = new AtomicSheepManager();
