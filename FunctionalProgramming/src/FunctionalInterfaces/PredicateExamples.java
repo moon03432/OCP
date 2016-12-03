@@ -31,6 +31,15 @@ public class PredicateExamples {
         Predicate<String> brown = s -> s.contains("brown");
         Predicate<String> notBrownEgg = egg.and(brown.negate());
 
-        System.out.println(notBrownEgg.test("blue egg"));
+        System.out.println(notBrownEgg.test("brown egg"));
+
+        // Example 4: Vivi
+        Predicate<String> meat = a -> a.endsWith("meat");
+        Predicate<String> pig = a -> a.contains("pig");
+        Predicate<String> sheep = a -> a.contains("sheep");
+        Predicate<String> Lunch = meat.and(pig.and(sheep));
+
+        System.out.println(Lunch.test("pig meat and sheep meat"));
+
     }
 }

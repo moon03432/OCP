@@ -15,8 +15,8 @@ import java.util.stream.Stream;
  *
  * Stream.empty()
  * Stream.of()
- * Stream.generate()
- * Stream.iterate()
+ * Stream.generate(Supplier)
+ * Stream.iterate(seed, unaryOperator)
  * collection.stream(), collection.ParallelStream()
  *
  */

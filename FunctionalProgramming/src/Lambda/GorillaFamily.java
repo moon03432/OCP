@@ -2,16 +2,23 @@ package Lambda;
 
 /**
  * Created by moon on 25/11/2016.
+ *
  */
 public class GorillaFamily {
+
+    private interface Gorilla {
+        String move();
+    };
 
     String walk = "walk";
 
     void everyonePlay(boolean baby) {
-        String approach = "amble";
+        final String approach = "amble";
 //        approach = "run";
+        walk = "sss";
 
         // lambda as inner class, the string need to be final or effectively final
+        // TODO: why "walk" can compile?
         play(()-> walk);
         play(()-> baby ? "hitch a ride": "run");
         play(()-> approach);

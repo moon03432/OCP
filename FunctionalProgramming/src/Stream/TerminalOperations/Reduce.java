@@ -1,5 +1,7 @@
 package Stream.TerminalOperations;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.function.BinaryOperator;
 import java.util.stream.Stream;
 
@@ -36,5 +38,9 @@ public class Reduce {
         empty.reduce(multiply).ifPresent(System.out::println);          // no output
         oneElement.reduce(multiply).ifPresent(System.out::println);     // 3
         threeElements.reduce(multiply).ifPresent(System.out::println);  // 90
+
+        // Exercice:
+        BinaryOperator<Integer> add = (a,b) -> a+b;
+        Stream.of(1000, 100, 10, 1).reduce(add).ifPresent(System.out::println);
     }
 }
