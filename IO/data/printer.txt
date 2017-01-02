@@ -1,0 +1,6 @@
+2.0
+2.0
+Animal [name=Tommy Tiger, age=5, type=T]
+Animal [name=Tommy Tiger, age=5, type=T]
+It has rained 10.12 inches this year
+It may rain 21.2 more inches this year

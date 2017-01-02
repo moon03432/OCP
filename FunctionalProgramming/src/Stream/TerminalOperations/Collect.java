@@ -1,5 +1,7 @@
 package Stream.TerminalOperations;
 
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
@@ -37,5 +39,14 @@ public class Collect {
         Stream<String> s4 = Stream.of("w", "o", "l", "f");
         TreeSet<String> set4 = s4.collect(Collectors.toCollection(TreeSet::new));
         System.out.println(set4); // [f, l, o, w]
+
+        // Review Question 16: Collectors partitioningBy & groupingBy
+        Stream<String> s5 = Stream.of("a", "c");
+        Stream<String> s6 = Stream.of("a", "c");
+
+        Map<Boolean, List<String>> p = s5.collect(Collectors.partitioningBy(b->b.startsWith("c")));
+        Map<Boolean, List<String>> g = s6.collect(Collectors.groupingBy(b->b.startsWith("c")));
+
+        System.out.println(p+" " + g);
     }
 }

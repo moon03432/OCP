@@ -32,7 +32,7 @@ public class PerformanceMeasuring {
         WhaleDataCalculator calculator = new WhaleDataCalculator();
         // Define the data
         List<Integer> data = new ArrayList<Integer>();
-        for(int i = 0; i<4000; i++) data.add(i);
+        for(int i = 0; i<1000; i++) data.add(i);
 
         // Process the data
         long start = System.currentTimeMillis();
